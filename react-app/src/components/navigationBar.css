@@ -1,0 +1,25 @@
+.navBar {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: lightgray;
+    font-size: 20px;
+}
+
+a {
+    margin-right: 10px;
+}
+a:hover {
+    background-color: dodgerblue;
+}
+
+.search {
+    border: none;
+    font-size: 20px;
+}
+.searchBar {
+    float: right;
+}
+
+.dropdownContent a {
+    display: block;
+}

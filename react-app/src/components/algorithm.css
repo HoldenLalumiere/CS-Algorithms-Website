@@ -7,6 +7,7 @@
 }
 .algButton:hover{
     background-color: gray;
+    cursor: pointer;
 }
 
 .algButton:focus{
