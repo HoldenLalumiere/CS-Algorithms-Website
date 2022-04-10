@@ -1,0 +1,14 @@
+.algButton {
+    outline: none;
+    width: 10%;
+    border-radius: 5px;
+    background-color: white;
+    border: none;
+}
+.algButton:hover{
+    background-color: gray;
+}
+
+.algButton:focus{
+    background-color: lightgray;
+}
