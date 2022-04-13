@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import navigationBar from "./navigationBar.css"
+import Algorithm from "./algorithm";
+import NavigationBarAlg from "./navigationBarAlg";
 
 export default class NavigationBar extends Component{
 
@@ -18,9 +20,8 @@ export default class NavigationBar extends Component{
                         <input onBlur={() => this.handleDropdown()} onFocus={() => this.handleDropdown()} className="search" type="text" placeholder="Search..."/>
                         <button type="submit">Submit</button>
                         <div className="dropdownContent" id="dropdown">
-                            <a>Alg1</a>
-                            <a>Alg2</a>
-                            <a>Alg3</a>
+                            {this.props.algs.map(algorithm =>
+                                <NavigationBarAlg algName={algorithm.Algorithm}/>)}
                         </div>
                     </div>
                 </div>
