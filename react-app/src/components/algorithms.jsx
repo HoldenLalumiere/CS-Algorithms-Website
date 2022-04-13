@@ -7,9 +7,9 @@ export default class Algorithms extends Component {
         Algorithms: [
             {Algorithm: "RedBlack"},
             {Algorithm: "ShortestPath"},
+            {Algorithm: "BFS"},
+            {Algorithm: "DFS"},
             //TODO remove these tests for the search bar
-            {Algorithm: "Placeholder1"},
-            {Algorithm: "Placeholder2"},
             {Algorithm: "PlAcEhOLdEr3"},
             {Algorithm: "placeholder4"},
             {Algorithm: "PLACEHOLDER5"}
