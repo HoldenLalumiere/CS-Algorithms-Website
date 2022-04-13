@@ -3,13 +3,14 @@ import navigationBar from "./navigationBar.css"
 import NavigationBarAlg from "./navigationBarAlg";
 
 export default class NavigationBar extends Component {
-
-    handleDropdown() {
-        document.getElementById("dropdown").classList.toggle("dropdownContent");
-        document.getElementById("dropdown").classList.toggle("show");
+    handleDropdown(e) {
+        if (!e.currentTarget.contains(e.relatedTarget)) {
+            document.getElementById("dropdown").classList.toggle("dropdownContent");
+            document.getElementById("dropdown").classList.toggle("show");
+        }
     }
 
-    search() {
+    handleSearch() {
         let input, div, algs, alg;
         input = document.getElementById("input").value.toUpperCase();
         div = document.getElementById("dropdown");
@@ -24,17 +25,16 @@ export default class NavigationBar extends Component {
         }
     }
 
-
     render() {
         return (
             <React.Fragment>
                 <div className="navBar">
                     <a href="home">Home</a>
-                    <div className="searchBar">
+                    <div className="searchBar" onBlur={(e) => this.handleDropdown(e)}
+                         onFocus={(e) => this.handleDropdown(e)}>
                         <form autoComplete="off">
-                            <input onBlur={() => this.handleDropdown()} onFocus={() => this.handleDropdown()}
-                                   className="search" type="text" placeholder="Search..." id="input"
-                                   onKeyUp={() => this.search()}/>
+                            <input className="search" type="text" placeholder="Search..." id="input"
+                                   onKeyUp={() => this.handleSearch()}/>
                         </form>
                         <div className="dropdownContent" id="dropdown">
                             {this.props.algs.map(algorithm =>
