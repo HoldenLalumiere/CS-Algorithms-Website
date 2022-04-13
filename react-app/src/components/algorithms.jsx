@@ -4,10 +4,15 @@ import NavigationBar from "./navigationBar";
 
 export default class Algorithms extends Component{
     state = {
-        Algorithms: [ //TODO maybe remove id
-            {id: 1, Algorithm: "RedBlack"}  ,
-            {id:2, Algorithm: "ShortestPath"},
-            {id: 3, Algorithm: "Hailey"}
+        Algorithms: [
+            {Algorithm: "RedBlack"},
+            {Algorithm: "ShortestPath"},
+            //TODO remove these tests for the search bar
+            {Algorithm: "Placeholder1"},
+            {Algorithm: "Placeholder2"},
+            {Algorithm: "PlAcEhOLdEr3"},
+            {Algorithm: "placeholder4"},
+            {Algorithm: "PLACEHOLDER5"}
         ],
     };
 

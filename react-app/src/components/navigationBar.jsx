@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import navigationBar from "./navigationBar.css"
-import Algorithm from "./algorithmBarAlgorithm";
 import NavigationBarAlg from "./navigationBarAlg";
 
 export default class NavigationBar extends Component{
@@ -8,6 +7,7 @@ export default class NavigationBar extends Component{
     handleDropdown() {
         document.getElementById("dropdown").classList.toggle("dropdownContent");
         document.getElementById("dropdown").classList.toggle("show");
+        //TODO remove this log
         console.log(document.getElementById("dropdown").classList)
     }
 
