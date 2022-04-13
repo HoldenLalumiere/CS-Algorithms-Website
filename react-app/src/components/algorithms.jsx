@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import AlgorithmsBar from "./algorithmsBar";
 import NavigationBar from "./navigationBar";
 
-export default class Algorithms extends Component{
+export default class Algorithms extends Component {
     state = {
         Algorithms: [
             {Algorithm: "RedBlack"},

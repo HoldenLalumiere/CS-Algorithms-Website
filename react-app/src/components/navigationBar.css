@@ -8,6 +8,7 @@
 a {
     margin-right: 10px;
 }
+
 a:hover {
     background-color: dodgerblue;
 }
@@ -16,6 +17,7 @@ a:hover {
     border: none;
     font-size: 20px;
 }
+
 .searchBar {
     float: right;
 }
@@ -24,6 +26,6 @@ a:hover {
     display: none;
 }
 
-.show a{
-    display:block;
+.show a {
+    display: block;
 }

@@ -5,11 +5,12 @@
     background-color: white;
     border: none;
 }
-.algButton:hover{
+
+.algButton:hover {
     background-color: gray;
     cursor: pointer;
 }
 
-.algButton:focus{
+.algButton:focus {
     background-color: lightgray;
 }

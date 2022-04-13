@@ -7,7 +7,7 @@ export default class AlgorithmBarAlgorithm extends Component {
     }
 
     renderSpecial() {
-        if (window.location.href === "http://localhost:3000/" + this.state.algName + "?"){
+        if (window.location.href === "http://localhost:3000/" + this.state.algName + "?") {
             return <a>&emsp; Here</a>;
         }
     }

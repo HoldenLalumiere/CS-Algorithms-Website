@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import AlgorithmBarAlgorithm from "./algorithmBarAlgorithm";
 
-export default class AlgorithmsBar extends Component{
+export default class AlgorithmsBar extends Component {
     render() {
         return (
             <React.Fragment>
