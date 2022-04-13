@@ -15,9 +15,7 @@ export default class NavigationBar extends Component{
                 <div className="navBar">
                     <a href="home">Home</a>
                     <div className="searchBar">
-                        <button onClick={() => this.handleDropdown()}>placeholder</button>
-
-                        <input className="search" type="text" placeholder="Search..."/>
+                        <input onBlur={() => this.handleDropdown()} onFocus={() => this.handleDropdown()} className="search" type="text" placeholder="Search..."/>
                         <button type="submit">Submit</button>
                         <div className="dropdownContent" id="dropdown">
                             <a>Alg1</a>
