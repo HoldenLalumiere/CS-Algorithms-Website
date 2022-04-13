@@ -8,7 +8,7 @@ export default class NavigationBarAlg extends Component {
     render() {
         return (
             <React.Fragment>
-                <a>{this.state.algName}</a>
+                <a href={this.state.algName}>{this.state.algName}</a>
             </React.Fragment>
         );
     }
