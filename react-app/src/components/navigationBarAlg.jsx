@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import navigationBarAlg from "./navigationBarAlg.css"
 
 export default class NavigationBarAlg extends Component {
     state = {
@@ -8,7 +9,7 @@ export default class NavigationBarAlg extends Component {
     render() {
         return (
             <React.Fragment>
-                <a href={this.state.algName}>{this.state.algName}</a>
+                <a className="navAlg" href={this.state.algName}>{this.state.algName}</a>
             </React.Fragment>
         );
     }
