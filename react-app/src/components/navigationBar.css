@@ -20,6 +20,10 @@ a:hover {
     float: right;
 }
 
-.dropdownContent a {
-    display: block;
+.dropdownContent {
+    display: none;
+}
+
+.show a{
+    display:block;
 }
