@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import algorithm from "./algorithm.css"
+import algorithmBarAlgorithm from "./algorithmBarAlgorithm.css"
 
-export default class Algorithm extends Component {
+export default class AlgorithmBarAlgorithm extends Component {
     state = {
         algName: this.props.algName,
     }

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import navigationBar from "./navigationBar.css"
-import Algorithm from "./algorithm";
+import Algorithm from "./algorithmBarAlgorithm";
 import NavigationBarAlg from "./navigationBarAlg";
 
 export default class NavigationBar extends Component{
