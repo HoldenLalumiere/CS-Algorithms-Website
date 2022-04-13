@@ -7,18 +7,25 @@ export default class AlgorithmBarAlgorithm extends Component {
     }
 
     renderSpecial() {
-        if (window.location.href === "http://localhost:3000/" + this.state.algName + "?") {
-            return <a>&emsp; Here</a>;
+        if (window.location.href === window.location.origin + "/" + this.state.algName) {
+            return (
+                <React.Fragment>
+                    <a>&emsp; Here</a>
+                    <br/>
+                </React.Fragment>
+            )
         }
+    }
+
+    handleMovePage() {
+        window.location.href = window.location.origin + "/" + this.state.algName;
     }
 
     render() {
         return (
             <React.Fragment>
-                <form action={this.state.algName}>
-                    <button class="algButton">{this.state.algName}</button>
-                    <br/>
-                </form>
+                <button onClick={() => this.handleMovePage()} class="algButton">{this.state.algName}</button>
+                <br/>
                 {this.renderSpecial()}
             </React.Fragment>
         );
