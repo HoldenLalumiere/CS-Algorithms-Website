@@ -17,7 +17,7 @@ public class BFS {
             System.out.println(n); //TODO remove
             br.mark(0);
 
-            Node[] nodes = new Node[n];
+            BFSNode[] nodes = new BFSNode[n];
 
 
 
@@ -25,7 +25,7 @@ public class BFS {
             ArrayList<> queue = new ArrayList<>();
             for (int x = 0; x < nodes.length; x++){
                 int l = 0;
-                Node start = nodes[x];
+                BFSNode start = nodes[x];
                 if (start.layer == -1){
 
                 }
