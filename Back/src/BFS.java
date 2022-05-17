@@ -1,19 +1,22 @@
-import org.w3c.dom.Node;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
  * Does a Breadth First Search on the user's data
- * Input must be in the following form:
- * <p>
- * totalNodeNum
- * nodeNum connectedNode connectedNode2 ...
- * node2Num connectedNode connectedNode2 ...
  */
 public class BFS {
 
+    /**
+     * Run the BFS
+     * Input must be in the following form:
+     * <p>
+     * totalNodeNum
+     * nodeNum connectedNode connectedNode2 ...
+     * node2Num connectedNode connectedNode2 ...
+     *
+     * @param input the input file from user input
+     */
     public void runBFS(File input) { //TODO update front end to save user input to a temp file
         BufferedReader br;
         try {
@@ -27,7 +30,7 @@ public class BFS {
             // Read node number
             for (int i = 0; i < n; i++) {
                 line = br.readLine();
-                int nodeNum = -1;
+                int nodeNum; //TODO remove this if it doesnt break the code = -1;
                 String[] nums = line.trim().split("\\s+");
                 nodeNum = Integer.parseInt(nums[1]);
                 BFSNode node = new BFSNode(nodeNum);
@@ -53,14 +56,13 @@ public class BFS {
             }
 
             // BFS traversal
-            ArrayList<BFSNode> queue = new ArrayList<BFSNode>();
-            for (int x = 0; x < nodes.length; x++) {
+            ArrayList<BFSNode> queue = new ArrayList<>();
+            for (BFSNode start : nodes) {
                 int l = 0;
-                BFSNode start = nodes[x];
                 if (start.layer == -1) {
                     start.layer = 1;
                     System.out.println(start.id + "(" + start.layer + ") "); //TODO idk if this needs change yet
-                    queue.add(nodes[x]);
+                    queue.add(start);
                     l++;
 
                     while (queue.size() > 0) {
